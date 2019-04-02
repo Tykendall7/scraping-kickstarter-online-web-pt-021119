@@ -1,6 +1,7 @@
 require 'nokogiri'
 
 def create_project_hash
+   html = File.read('fixtures/kickstarter.html')
 	  kickstarter = Nokogiri::HTML(html) ### Nokogiri inherits all methods from Ruby's HTML module, I think? and passes in the site to scrape
 
    projects = {} ### create a place to store every project scraped
